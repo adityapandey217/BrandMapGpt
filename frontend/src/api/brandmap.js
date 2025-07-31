@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'http://brandmapgpt.onrender.com', // Update with your backend URL
   timeout: 200000, // 200 seconds timeout for LLM processing
   headers: {
     'Content-Type': 'application/json',
@@ -19,17 +19,6 @@ api.interceptors.response.use(
   }
 );
 
-/**
- * Submit brand map form data to the backend
- * @param {Object} formData - The form data to submit
- * @param {string} formData.brandName - Brand name
- * @param {string} formData.brandDescription - Brand description
- * @param {string} formData.originCountry - Origin country
- * @param {Array} formData.targetCountries - Array of target countries
- * @param {string} formData.brandKeywords - Comma-separated keywords
- * @param {string} formData.competitors - Comma-separated competitors
- * @returns {Promise<Object>} - Parsed JSON response from backend
- */
 export const submitBrandMapForm = async (formData) => {
   try {
     // Transform form data to match backend expectations
@@ -125,38 +114,7 @@ export const submitBrandMapForm = async (formData) => {
   }
 };
 
-/**
- * Check if the API is available
- * @returns {Promise<boolean>} - True if API is available
- */
-export const checkApiHealth = async () => {
-  try {
-    const response = await api.get('/api/health/', { timeout: 5000 });
-    return response.status === 200;
-  } catch (error) {
-    console.warn('API health check failed:', error.message);
-    return false;
-  }
-};
 
-/**
- * Get available countries from the backend
- * @returns {Promise<Array>} - Array of country names
- */
-export const getAvailableCountries = async () => {
-  try {
-    const response = await api.get('/api/countries/');
-    return response.data.countries || [];
-  } catch (error) {
-    console.warn('Failed to fetch countries:', error.message);
-    // Return default countries if API fails
-    return [
-      'United States', 'Canada', 'United Kingdom', 'Germany', 'France', 
-      'Spain', 'Italy', 'Japan', 'China', 'India', 'Australia', 'Brazil',
-      'Mexico', 'South Korea', 'Netherlands', 'Switzerland', 'Sweden',
-      'Norway', 'Denmark', 'Finland', 'Austria', 'Belgium', 'Ireland'
-    ];
-  }
-};
+
 
 export default api;
