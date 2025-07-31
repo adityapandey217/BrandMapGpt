@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: 'http://brandmapgpt.onrender.com', // Update with your backend URL
+  baseURL: 'https://brandmapgpt.onrender.com', // Update with your backend URL
   timeout: 200000, // 200 seconds timeout for LLM processing
   headers: {
     'Content-Type': 'application/json',
