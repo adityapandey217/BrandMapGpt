@@ -33,7 +33,7 @@ QLOO_API_BASE_URL = os.getenv('QLOO_API_BASE_URL', 'https://hackathon.api.qloo.c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['brandmapgpt.onrender.com', 'localhost']
 
 
 # Application definition
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "core",  # Your core app for brand mapping
+    "core",
 ]
 
 MIDDLEWARE = [
