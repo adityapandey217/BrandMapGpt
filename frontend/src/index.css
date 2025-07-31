@@ -1,0 +1,250 @@
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+/* Enhanced typography and content styling */
+.cultural-analysis,
+.brand-strategy,
+.brand-persona,
+.competitive-analysis {
+  color: #f8fafc;
+  line-height: 1.8;
+}
+
+.cultural-analysis h1,
+.cultural-analysis h2,
+.cultural-analysis h3,
+.brand-strategy h1,
+.brand-strategy h2,
+.brand-strategy h3,
+.brand-persona h1,
+.brand-persona h2,
+.brand-persona h3,
+.competitive-analysis h1,
+.competitive-analysis h2,
+.competitive-analysis h3 {
+  color: white !important;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cultural-analysis h1,
+.brand-strategy h1,
+.brand-persona h1,
+.competitive-analysis h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid rgba(168, 85, 247, 0.5);
+  padding-bottom: 1rem;
+}
+
+.cultural-analysis h2,
+.brand-strategy h2,
+.brand-persona h2,
+.competitive-analysis h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid rgba(168, 85, 247, 0.3);
+  padding-bottom: 0.75rem;
+}
+
+.cultural-analysis h3,
+.brand-strategy h3,
+.brand-persona h3,
+.competitive-analysis h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.cultural-analysis ul,
+.brand-strategy ul,
+.brand-persona ul,
+.competitive-analysis ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.cultural-analysis li,
+.brand-strategy li,
+.brand-persona li,
+.competitive-analysis li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  line-height: 1.7;
+}
+
+.cultural-analysis li::before,
+.brand-strategy li::before,
+.brand-persona li::before,
+.competitive-analysis li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a855f7;
+  font-weight: bold;
+}
+
+.cultural-analysis strong,
+.brand-strategy strong,
+.brand-persona strong,
+.competitive-analysis strong {
+  color: #ffffff !important;
+  font-weight: 700;
+  background: rgba(168, 85, 247, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.cultural-analysis em,
+.brand-strategy em,
+.brand-persona em,
+.competitive-analysis em {
+  color: #93c5fd !important;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.cultural-analysis p,
+.brand-strategy p,
+.brand-persona p,
+.competitive-analysis p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.cultural-analysis code,
+.brand-strategy code,
+.brand-persona code,
+.competitive-analysis code {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #67e8f9 !important;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  border: 1px solid rgba(103, 232, 249, 0.3);
+}
+
+/* Enhanced animations */
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4000ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #a855f7, #ec4899);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #db2777);
+}
+
+/* Prose improvements for better readability */
+.prose {
+  max-width: none;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: white;
+  font-weight: bold;
+}
+
+.prose p {
+  color: #e2e8f0;
+  line-height: 1.8;
+}
+
+.prose strong {
+  color: white;
+  font-weight: 700;
+}
+
+.prose em {
+  color: #93c5fd;
+}
+
+.prose code {
+  color: #67e8f9;
+  background-color: rgba(15, 23, 42, 0.8);
+}
+
+.prose ul {
+  color: #e2e8f0;
+}
+
+.prose li {
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
