@@ -33,7 +33,7 @@ QLOO_API_BASE_URL = os.getenv('QLOO_API_BASE_URL', 'https://hackathon.api.qloo.c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brandmapgpt.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['brandmapgpt.onrender.com', 'localhost','127.0.0.1','64.23.191.2']
 
 
 # Application definition
