@@ -1,16 +1,14 @@
 import axios from 'axios';
 
 
-// Create axios instance with base configuration
 const api = axios.create({
-  baseURL: 'https://brandmapgpt.onrender.com', // Update with your backend URL
-  timeout: 200000, // 200 seconds timeout for LLM processing
+  baseURL: 'https://brandmapgpt.onrender.com',
+  timeout: 200000,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Add response interceptor for global error handling
 api.interceptors.response.use(
   (response) => response,
   (error) => {
